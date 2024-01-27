@@ -25,8 +25,6 @@ class Timer(object):
     def __exit__(self, *args):
         self.end = time.time()
         self.secs = self.end - self.start
-        with open('summary.txt', 'a') as f:
-            f.write(f"Approximate runtime")
         if self.verbose:
             print(f"Approximate runtime: {self.secs:.2f} seconds")
 
