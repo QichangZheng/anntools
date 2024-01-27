@@ -25,6 +25,7 @@ class Timer(object):
     def __exit__(self, *args):
         self.end = time.time()
         self.secs = self.end - self.start
+
         if self.verbose:
             print(f"Approximate runtime: {self.secs:.2f} seconds")
 
